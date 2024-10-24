@@ -17,7 +17,9 @@ Pour lancer les benchmarks :
 sh bench.sh
 ```
 
-Les scripts Python se situent dans le dossier **`src`** afin de générer les différents graphes.
+Les scripts Python **`.py`** se situent dans le dossier **`src`** afin de générer les différents graphes dans le dossier **`plots`**.
+
+Pour lancer la génération de tous les graphes, utilisez la commande :
 ```sh
-python3 q*.py
+sh plots.sh
 ```
