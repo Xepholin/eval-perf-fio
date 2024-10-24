@@ -36,7 +36,7 @@ def import_data():
 	
 	return data, data2
 
-def extract_rw_rand(data, index_q, tid, datatype):
+def extract_rw_rand(data, index_q, section, datatype):
 	"""
 	index_q\n
 	0 => "../mesures/q1/rand/randrw_" \n
@@ -46,11 +46,17 @@ def extract_rw_rand(data, index_q, tid, datatype):
 	4 = > "../mesures/q4/randrw_" \n
 	"""
 
-	read = np.array([])
-	write = np.array([])
+	d = []
 
-	for i in range (len(listes[index_q])):
-		read = np.append(read, data[index_q][i]['jobs'][tid]['read'][datatype])
-		write = np.append(write, data[index_q][i]['jobs'][tid]['write'][datatype])
+	for i in range(len(listes[index_q])):
+		nb_threads = int(data[index_q][i]['jobs'][0]['job options']['numjobs'])
+		ds = np.array([])
 
-	return read, write
+		for tid in range(nb_threads):
+			ds = np.append(ds, data[index_q][i]['jobs'][tid][section][datatype])
+
+		if (type(ds[0]) != dict):
+			d.append(np.mean(ds))
+		else:
+			d.append(ds)
+	return d

@@ -2,8 +2,11 @@ import matplotlib.pyplot as plt
 from const import *
 
 def rand_rw_part(data, output_path):
-	bw_read_rw, bw_write_rw = extract_rw_rand(data, 1, 0, 'bw')
-	bw_read_randrw, bw_write_randrw = extract_rw_rand(data, 0, 0, 'bw')
+	bw_read_rw = extract_rw_rand(data, 1, 'read','bw')
+	bw_write_rw = extract_rw_rand(data, 1, 'write','bw')
+
+	bw_read_randrw = extract_rw_rand(data, 0, 'read', 'bw')
+	bw_write_randrw = extract_rw_rand(data, 0, 'write', 'bw')
 
 	_, axs = plt.subplots(1, 2, figsize=(14,7))
 	axs = axs.ravel()
