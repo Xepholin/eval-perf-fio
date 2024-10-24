@@ -11,7 +11,13 @@ L’utilisation de fio se fait en ligne de commande. Une manpage est disponible 
 ## Consigne :
 En utilisant fio, vous allez devoir répondre à des énoncés vous demandant d’effectuer des comparaisons entre plusieurs tâches I/O en faisant varier un (ou plusieurs) paramètre(s). Ces comparaisons prendront la forme de graphes de bande-passante générés par vos soins et d’un texte mettant en avant les différences observées et présentant une réflexion sur la raison de ces différences. Pour l’énoncé 3, vous présenterez également un graphe de déciles des latences observées.
 
-### Usage :
+### Usage
+Pour lancer les benchmarks :
 ```sh
 sh bench.sh
+```
+
+Les scripts Python se situent dans le dossier **`src`** afin de générer les différents graphes.
+```sh
+python3 q*.py
 ```
