@@ -1,8 +1,8 @@
 import json
 import numpy as np
 
-listPath = ["../mesures/q1/rand/randrw_",  "../mesures/q1/seq/rw_", "../mesures/q2/randrw_" , "../mesures/q3/randrw"  , "../mesures/q4/randrw_"]
-listPath2 = ["../mesures2/q1/rand/randrw_",  "../mesures2/q1/seq/rw_", "../mesures2/q2/randrw_" , "../mesures2/q3/randrw"  , "../mesures2/q4/randrw_"]
+listPath = ["../bench/1/q1/rand/randrw_",  "../bench/1/q1/seq/rw_", "../bench/1/q2/randrw_" , "../bench/1/q3/randrw"  , "../bench/1/q4/randrw_"]
+listPath2 = ["../bench/2/q1/rand/randrw_",  "../bench/2/q1/seq/rw_", "../bench/2/q2/randrw_" , "../bench/2/q3/randrw"  , "../bench/2/q4/randrw_"]
 listeQ1 = [ "0.0", "12.5" , "25.0", "37.5", "50.0" , "62.5", "75.0", "87.5","100.0"]
 listeQ2 = [str(i) for i in range(10,21)]
 listeQ3 = [""]
