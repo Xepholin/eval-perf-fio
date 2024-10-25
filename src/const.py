@@ -1,7 +1,7 @@
 import json
 import numpy as np
 
-listPath = ["../bench/3/q1/rand/randrw_",  "../bench/3/q1/seq/rw_", "../bench/3/q2/randrw_" , "../bench/3/q3/randrw"  , "../bench/3/q4/randrw_"]
+listPath = ["../bench/3/q1/rand/randrw_",  "../bench/3/q1/seq/rw_", "../bench/3/q2/randrw_", "../bench/3/q3/randrw", "../bench/3/q4/randrw_"]
 listeQ1 = [ "0.0", "12.5" , "25.0", "37.5", "50.0" , "62.5", "75.0", "87.5","100.0"]
 listeQ2 = [str(i) for i in range(10,21)]
 listeQ3 = [""]
@@ -29,13 +29,13 @@ def import_data():
 	
 	return data
 
-def extract_rw_rand(data, index_q, section, datatype):
+def extract_data(data, index_q, section, datatype):
 	"""
 	index_q\n
 	0 => "../mesures/q1/rand/randrw_" \n
 	1 => "../mesures/q1/seq/rw_" \n
 	2 => "../mesures/q2/randrw_" \n
-	3 => "../mesures/q3/randrw" \n
+	3 => "../mesures/q3/randrw_" \n
 	4 = > "../mesures/q4/randrw_" \n
 	"""
 

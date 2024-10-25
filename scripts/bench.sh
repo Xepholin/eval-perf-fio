@@ -25,11 +25,7 @@ do
     fio --name=output --output=q2/randrw_$i.json --output-format=json --loops=5 --runtime=$run  --time_based --numjobs=1 --rwmixwrite=33 --bs=$result --filesize=1G --readwrite=randrw --direct=1
 done
 
-#  --write_bw_log=log$i 
-
-fio --name=output --output=q3/randrw_30.json --output-format=json --loops=5 --runtime=$run  --time_based --numjobs=1 --rwmixwrite=33 --bssplit=4k/30 --filesize=1G --readwrite='randrw' --direct=1
-fio --name=output --output=q3/randrw_60.json --output-format=json --loops=5 --runtime=$run  --time_based --numjobs=1 --rwmixwrite=33 --bssplit=16k/60 --filesize=1G --readwrite='randrw' --direct=1
-fio --name=output --output=q3/randrw_10.json --output-format=json --loops=5 --runtime=$run  --time_based --numjobs=1 --rwmixwrite=33 --bssplit=64k/10 --filesize=1G --readwrite='randrw' --direct=1
+fio --name=output --output=q3/randrw.json --output-format=json --loops=5 --runtime=$run  --time_based --numjobs=1 --rwmixwrite=33 --bssplit=4k/30:16k/60:64k/10 --filesize=1G --readwrite='randrw' --direct=1
 
 fio --output=q4/randrw_1.json --output-format=json --name=output --loops=5 --runtime=$run  --time_based --numjobs=1 --rwmixwrite=33 --bs=16k --filesize=1G --readwrite='randrw' --direct=1 
 

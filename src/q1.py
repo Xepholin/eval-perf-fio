@@ -2,11 +2,11 @@ import matplotlib.pyplot as plt
 from const import *
 
 def rand_rw_part(data, output_path):
-	bw_read_rw = extract_rw_rand(data, 1, 'read','bw')
-	bw_write_rw = extract_rw_rand(data, 1, 'write','bw')
+	bw_read_rw = extract_data(data, 1, 'read','bw')
+	bw_write_rw = extract_data(data, 1, 'write','bw')
 
-	bw_read_randrw = extract_rw_rand(data, 0, 'read', 'bw')
-	bw_write_randrw = extract_rw_rand(data, 0, 'write', 'bw')
+	bw_read_randrw = extract_data(data, 0, 'read', 'bw')
+	bw_write_randrw = extract_data(data, 0, 'write', 'bw')
 
 	_, axs = plt.subplots(1, 2, figsize=(14,7))
 	axs = axs.ravel()
@@ -18,7 +18,7 @@ def rand_rw_part(data, output_path):
 	axs[1].plot(listeQ1, bw_write_rw, lw=2, label="Write BW")
 
 	axs[0].set_title("Read Sequential Vs. Random wrt. % of write")
-	axs[0].set_xlabel("Pourcentage of write")
+	axs[0].set_xlabel("Pourcentage of read")
 	axs[0].set_ylabel("Bandwidth")
 	axs[0].legend(loc='best')
 	axs[0].grid(True)
