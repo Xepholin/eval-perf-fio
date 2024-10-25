@@ -19,6 +19,5 @@ def rand_rw_parallel(data, output_path):
 
 	plt.savefig(output_path)
     
-data, data2 = import_data()
+data = import_data()
 rand_rw_parallel(data, "../plots/bw_rw_rand_parallel.png")
-rand_rw_parallel(data2, "../plots/bw_rw_rand_parallel2.png")

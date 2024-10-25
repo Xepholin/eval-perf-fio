@@ -19,6 +19,5 @@ def rand_rw_size(data, output_path):
 
 	plt.savefig(output_path)
     
-data, data2 = import_data()
+data = import_data()
 rand_rw_size(data, "../plots/bw_rw_rand_size.png")
-rand_rw_size(data2, "../plots/bw_rw_rand_size2.png")

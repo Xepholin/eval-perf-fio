@@ -32,6 +32,5 @@ def rand_rw_part(data, output_path):
 	plt.tight_layout()
 	plt.savefig(output_path)
     
-data, data2 = import_data()
+data = import_data()
 rand_rw_part(data, "../plots/bw_rw_rand_part.png")
-rand_rw_part(data2, "../plots/bw_rw_rand_part2.png")

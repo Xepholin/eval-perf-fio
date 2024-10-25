@@ -1,8 +1,7 @@
 import json
 import numpy as np
 
-listPath = ["../bench/1/q1/rand/randrw_",  "../bench/1/q1/seq/rw_", "../bench/1/q2/randrw_" , "../bench/1/q3/randrw"  , "../bench/1/q4/randrw_"]
-listPath2 = ["../bench/2/q1/rand/randrw_",  "../bench/2/q1/seq/rw_", "../bench/2/q2/randrw_" , "../bench/2/q3/randrw"  , "../bench/2/q4/randrw_"]
+listPath = ["../bench/3/q1/rand/randrw_",  "../bench/3/q1/seq/rw_", "../bench/3/q2/randrw_" , "../bench/3/q3/randrw"  , "../bench/3/q4/randrw_"]
 listeQ1 = [ "0.0", "12.5" , "25.0", "37.5", "50.0" , "62.5", "75.0", "87.5","100.0"]
 listeQ2 = [str(i) for i in range(10,21)]
 listeQ3 = [""]
@@ -17,24 +16,18 @@ listes = [listeQ1, listeQ1, listeQ2, listeQ3, listeQ4]
 
 def import_data():
 	data = [ [] for i in range(len(listPath))]
-	data2 = [ [] for i in range(len(listPath2))]
 	i = 0
 
 	for liste in listes:
 		for L in liste:
 			strPath = listPath[i] + L + ".json"
-			strPath2 = listPath2[i] + L + ".json"
 			with open(strPath, 'r' ) as file:    
 				tmp = json.load(file)
 				data[i].append( tmp)
-
-			with open(strPath2, 'r' ) as file:    
-				tmp = json.load(file)
-				data2[i].append( tmp)
 		
 		i+=1
 	
-	return data, data2
+	return data
 
 def extract_rw_rand(data, index_q, section, datatype):
 	"""
