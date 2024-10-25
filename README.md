@@ -1,6 +1,6 @@
 # Evaluation de performance
 
-Nous allons utiliser pour ce TP, le logiciel **`fio`** qui a pour but de générer des tâches I/O et de reporter dans un fichier de résultats les performances obtenues. Pour un système Ubuntu, l’installation se fait simplement à l’aide de la commande suivante. Pour les autres systèmes, veuillez vous référer à la documentation présente sur le dépôt.
+Nous allons utiliser pour ce TP, le logiciel `fio` qui a pour but de générer des tâches I/O et de reporter dans un fichier de résultats les performances obtenues. Pour un système Ubuntu, l’installation se fait simplement à l’aide de la commande suivante. Pour les autres systèmes, veuillez vous référer à la documentation présente sur le dépôt.
 
 ```sh
 apt-get install fio
@@ -17,7 +17,7 @@ Pour lancer les benchmarks :
 sh bench.sh
 ```
 
-Les scripts Python **`.py`** se situent dans le dossier **`src`** afin de générer les différents graphes dans le dossier **`plots`**.
+Les scripts Python `.py` se situent dans le dossier `src` afin de générer les différents graphes dans le dossier `plots`.
 
 Pour lancer la génération de tous les graphes, utilisez la commande :
 ```sh
