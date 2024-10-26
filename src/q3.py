@@ -11,8 +11,8 @@ def rand_rw_size(data, output_path):
 
 	percentiles = [float(value) for value in percentiles]
 
-	percentile_split_read = np.array([float(value) for value in percentile_split_read])
-	percentile_split_write = np.array([float(value) for value in percentile_split_write])
+	percentile_split_read = np.array([float(value) / 10**6 for value in percentile_split_read])
+	percentile_split_write = np.array([float(value) / 10**6 for value in percentile_split_write])
 
 	# percentile_default_read = list(bw_read_percentile[1][0]['percentile'].values())
 	# percentile_default_write = list(bw_write_percentile[1][0]['percentile'].values())
@@ -24,15 +24,18 @@ def rand_rw_size(data, output_path):
 
 	X_axis = np.arange(len(percentile_split_read[2:11])) 
 
-	plt.bar(X_axis - 0.2, percentile_split_read[2:11], 0.4, label = 'CLat of Read Bssplit') 
-	plt.bar(X_axis + 0.2, percentile_split_write[2:11], 0.4, label = 'CLat of Write Bssplit') 
+	plt.bar(X_axis - 0.2, percentile_split_read[2:11], 0.4, label = "Latence Complète de la lecture du split") 
+	plt.bar(X_axis + 0.2, percentile_split_write[2:11], 0.4, label = "Latence Complète de l'écriture du split") 
 
-	plt.title("Complete Latency of Read/Write Bssplit wrt. Percentiles")
+	plt.title("Latence Complète de la Lecture/Écriture du split wrt. Centiles")
 	plt.xticks(X_axis, percentiles[2:11]) 
-	plt.xlabel("Percentiles")
-	plt.ylabel("CLat")
+	plt.xlabel("Centiles")
+	plt.ylabel("Latence Complète")
 	plt.legend(loc='best')
 	plt.grid(True)
+
+	plt.xlim(left=-1)
+	plt.ylim(bottom=0)
 
 	plt.savefig(output_path)
     
