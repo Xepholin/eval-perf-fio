@@ -4,6 +4,7 @@ import numpy as np
 listPath = ["../bench/3/q1/rand/randrw_",  "../bench/3/q1/seq/rw_", "../bench/3/q2/randrw_", "../bench/3/q3/randrw", "../bench/3/q4/randrw_"]
 listeQ1 = [ "0.0", "12.5" , "25.0", "37.5", "50.0" , "62.5", "75.0", "87.5","100.0"]
 listeQ2 = [str(i) for i in range(10,21)]
+listeQ2bis = ["1ko", "2ko", "4ko", "8ko", "16ko", "32ko", "64ko", "128ko", "256ko", "512ko", "1Mo"]
 listeQ3 = [""]
 listeQ4 = ["1","2","4","6","8"]
 

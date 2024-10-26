@@ -1,5 +1,5 @@
 #!/bin/bash
-
+mkdir -p plots
 cd src
 
 python3 q1.py

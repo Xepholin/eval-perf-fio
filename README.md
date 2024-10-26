@@ -14,12 +14,12 @@ En utilisant fio, vous allez devoir répondre à des énoncés vous demandant d�
 ### Usage
 Pour lancer les benchmarks :
 ```sh
-sh bench.sh
+sh scripts/bench.sh
 ```
 
 Les scripts Python `.py` se situent dans le dossier `src` afin de générer les différents graphes dans le dossier `plots`.
 
 Pour lancer la génération de tous les graphes, utilisez la commande :
 ```sh
-sh plots.sh
+sh scripts/plots.sh
 ```

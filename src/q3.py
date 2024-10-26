@@ -27,10 +27,10 @@ def rand_rw_size(data, output_path):
 	plt.bar(X_axis - 0.2, percentile_split_read[2:11], 0.4, label = "Latence Complète de la lecture du split") 
 	plt.bar(X_axis + 0.2, percentile_split_write[2:11], 0.4, label = "Latence Complète de l'écriture du split") 
 
-	plt.title("Latence Complète de la Lecture/Écriture du split wrt. Centiles")
+	plt.title("Latence Complète de la Lecture/Écriture du split wrt. Déciles")
 	plt.xticks(X_axis, percentiles[2:11]) 
-	plt.xlabel("Centiles")
-	plt.ylabel("Latence Complète")
+	plt.xlabel("Déciles")
+	plt.ylabel("Latence Complète en s")
 	plt.legend(loc='best')
 	plt.grid(True)
 
